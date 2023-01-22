@@ -1,0 +1,16 @@
+N = int(input())
+ 
+for i in range(N):
+    f = list(map(int, input().split()))
+    s = list(map(int, input().split()))
+    
+    f.sort()
+    s.sort()
+    
+    if f[-1] != s[-1]:
+        print("NO")
+        
+    elif f[0] + s[0] == f[1]:
+        print("YES")
+    else:
+        print("NO")
