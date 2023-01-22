@@ -1,0 +1,26 @@
+n = int(input())
+
+nums = list(map(int, input().split()))
+
+nums.sort()
+
+f = []
+s = []
+t = []
+
+f = [nums[0]]
+
+if nums[-1] > 0:
+    s = [nums[-1]]
+    t = nums[1:-1]
+    
+else:
+    s = nums[1:3]
+    t = nums[3:]
+
+print(len(f), end = " ")
+print( " ".join(list(map(str, f))))
+print(len(s), end = " ")
+print(  " ".join(list(map(str, s))))
+print(len(t), end = " ")
+print(  " ".join(list(map(str, t))))
